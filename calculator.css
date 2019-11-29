@@ -1,0 +1,260 @@
+.button{
+    cursor: pointer;
+    width: 74.5px;
+    float: left;
+    text-align: center;
+    line-height: 56px;
+    font-weight: 900;
+    font-size: 22px;
+    background: #e6e6e6;
+    font-family: sans-serif;
+}
+.top {
+    display:inline-flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    line-height: 1rem;
+
+
+}
+.branding {
+    flex-grow: 1;
+    cursor: default;
+    font-size: 0.8rem;
+    padding-left: 5px;
+}
+.calculator-menu{
+   float: left;
+}
+.calculator-chosen {
+    font-size: 1rem;
+    float: right;
+    margin: 0px 20px;
+    letter-spacing: 2px;
+    cursor: default;
+    padding: 10px 12px;
+    font-weight: 900;
+}
+.window {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.window > div {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 2rem;
+}
+
+.logo{
+    margin-top: 12px;
+}
+#evaluate{
+
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    width: 74.5px;
+    line-height: 56px;
+    background: #e6e6e6;
+    font-family: sans-serif;
+}
+#percent{
+
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    width: 74.5px;
+    line-height: 56px;
+    background: #f2f2f2;
+    font-family: sans-serif;
+}
+
+#root{
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    width: 74.5px;
+    font-size: 15px;
+    line-height: 56px;
+    background: #f2f2f2;
+    font-family: sans-serif;
+
+
+}
+#dividex{
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    width: 74.5px;
+    font-size: 15px;
+    line-height: 56px;
+    background: #f2f2f2;
+    font-family: sans-serif;
+
+
+}
+#c{
+
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    width: 74.5px;
+    line-height: 56px;
+    background: #e6e6e6;
+    font-family: sans-serif;
+}
+
+#clear{
+
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    width: 74.5px;
+    line-height: 56px;
+    background: #e6e6e6;
+    font-family: sans-serif;
+}
+#Clear{
+
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    width: 74.5px;
+    line-height: 56px;
+    background: #e6e6e6;
+    font-family: sans-serif;
+}
+#Clear{
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    width: 74.5px;
+    line-height: 56px;
+    background: #e6e6e6;
+    font-family: sans-serif;
+}
+#delete{
+
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    width: 74.5px;
+    line-height: 34px;
+    background: #e6e6e6;
+    font-family: sans-serif;
+}
+
+#square{
+
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    width: 74.5px;
+    line-height: 51px;
+    background: #f2f2f2;
+    font-family: sans-serif;
+}
+
+#cube{
+
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    width: 74.5px;
+    line-height: 56px;
+    background: #f2f2f2;
+    font-family: sans-serif;
+}
+
+#sin{
+
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    width: 74.5px;
+    line-height: 56px;
+    background: #f2f2f2;
+    font-family: sans-serif;
+}
+
+#cos{
+
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    width: 74.5px;
+    line-height: 56px;
+    background: #f2f2f2;
+    font-family: sans-serif;
+}
+
+#tan{
+
+
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    width: 74.5px;
+    line-height: 56px;
+    background: #f2f2f2;
+    font-family: sans-serif;
+}
+
+#log{
+
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    width: 74.5px;
+    line-height: 56px;
+    background: #f2f2f2;
+    font-family: sans-serif;
+}
+
+#mc{
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    width: 74.5px;
+    line-height: 56px;
+    background: #f2f2f2;
+    font-family: sans-serif;
+}
+
+.selct{
+
+    width: 70px;
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    width: 74.5px;
+    line-height: 56px;
+    background: #f2f2f2;
+}
+
+.container{
+ width: 370px;
+ margin: 0 auto;
+
+}
+.contain{
+ width: 370px;
+ margin: 0 auto;
+
+}
+
+#demo {
+    border: 0;
+    text-align: right;
+    width: 278px;
+    font-size: 26px;
+    font-weight: 900;
+    background:#f2f2f2;
+    padding: 19px 10px;
+    margin: 0 73px;
+    float: right;
+
+}
