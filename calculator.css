@@ -1,39 +1,65 @@
-.button,.button_1{
-    cursor: pointer;
-    width: 74.5px;
-    float: left;
-    text-align: center;
-    line-height: 56px;
-    font-weight: 900;
-    font-size: 22px;
-    background: #e6e6e6;
-    font-family: sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: url("https://pp.vk.me/c633423/v633423092/2745e/NZtBthrAF9k.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.padding {
+    padding: 5px 10px 0 10px;
+}
+.screen {
+    height: 100px;
+}
+.screen input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: transparent;
+    text-align: right;
+}
+#history {
+    font-size: 1.1rem;
+    padding: 0 10px;
+    letter-spacing: 5px;
+}
+#main {
+    font-size: 3rem;
+    color: #000;
+    font-weight: 600;
+    padding: 0 10px;
+}
+.history-screen {
+    height: 30%;
+}
+.main-screen {
+    height: 70%;
 }
 .top {
-    display:inline-flex;
+    display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    line-height: 1rem;
-
-
+    align-items: stretch;
+    line-height: 2rem;
 }
 .branding {
     flex-grow: 1;
     cursor: default;
     font-size: 0.8rem;
-    padding-left: 5px;
-}
-.calculator-menu{
-   float: left;
-}
-.calculator-chosen {
-    font-size: 1rem;
-    float: right;
-    margin: 0px 20px;
-    letter-spacing: 2px;
-    cursor: default;
-    padding: 10px 12px;
-    font-weight: 900;
+    padding-left: 15px;
 }
 .window {
     display: flex;
@@ -44,285 +70,136 @@
     flex-grow: 1;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     line-height: 2rem;
 }
-
-.logo{
-    margin-top: 12px;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-#evaluate{
-
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 56px;
-    background: #e6e6e6;
-    font-family: sans-serif;
+.contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 200px;
 }
-#percent{
-
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 56px;
-    background: #f2f2f2;
-    font-family: sans-serif;
-}
-
-#root{
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    font-size: 15px;
-    line-height: 56px;
-    background: #f2f2f2;
-    font-family: sans-serif;
-
-
-}
-#dividex{
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    font-size: 15px;
-    line-height: 56px;
-    background: #f2f2f2;
-    font-family: sans-serif;
-
-
-}
-#c{
-
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 56px;
-    background: #e6e6e6;
-    font-family: sans-serif;
-}
-
-#clear{
-
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 56px;
-    background: #e6e6e6;
-    font-family: sans-serif;
-}
-#Clear{
-
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 56px;
-    background: #e6e6e6;
-    font-family: sans-serif;
-}
-#clear_entry{
-
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 56px;
-    background: #e6e6e6;
-    font-family: sans-serif;
-}
-#delete{
-
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 34px;
-    background: #e6e6e6;
-    font-family: sans-serif;
-}
-#remove{
-
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 34px;
-    background: #e6e6e6;
-    font-family: sans-serif;
-}
-
-#square{
-
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 51px;
-    background: #f2f2f2;
-    font-family: sans-serif;
-}
-
-#cube{
-
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 56px;
-    background: #f2f2f2;
-    font-family: sans-serif;
-}
-
-#sin{
-
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 56px;
-    background: #f2f2f2;
-    font-family: sans-serif;
-}
-
-#cos{
-
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 56px;
-    background: #f2f2f2;
-    font-family: sans-serif;
-}
-
-#tan{
-
-
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 56px;
-    background: #f2f2f2;
-    font-family: sans-serif;
-}
-#raise_power{
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 56px;
-    background: #f2f2f2;
-    font-family: sans-serif;
-}
-#log{
-
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 56px;
-    background: #f2f2f2;
-    font-family: sans-serif;
-}
-
-#Exponential{
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 56px;
-    background: #f2f2f2;
-    font-family: sans-serif;
-}
-#Modulus{
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 56px;
-    background: #f2f2f2;
-    font-family: sans-serif;
-}
-#arrow{
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 56px;
-    background: #f2f2f2;
-    font-family: sans-serif;
-}
-
-#clear_entry{
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 56px;
-    background: #f2f2f2;
-    font-family: sans-serif;
-}
-#mc{
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 56px;
-    background: #f2f2f2;
-    font-family: sans-serif;
-}
-
-.selct{
-
-    width: 70px;
-    float: left;
-    cursor: pointer;
-    text-align: center;
-    width: 74.5px;
-    line-height: 56px;
+#calculator {
+    width: 300px;
+    border: 1px solid #1883d7;
+    box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.2);
     background: #f2f2f2;
 }
-
-.container{
- width: 370px;
- margin: 0 auto;
-
+#scientific_calc{
+    width: 350px;
+    border: 1px solid #1883d7;
+    box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.2);
+    background: #f2f2f2;
 }
-.contain{
-    margin-top: 0px 10px;
- width: 380px;
- margin: 0 auto;
-
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#demo {
-    border: 0;
-    text-align: right;
-    width: 278px;
-    font-size: 26px;
+
+.number {
     font-weight: 900;
-    background:#f2f2f2;
-    padding: 19px 10px;
-    margin: 0 73px;
-    float: right;
-
+    font-size: 1.5rem;
 }
-#demo_1 {
-    border: 0;
-    text-align: right;
-    width: 285px;
-    font-size: 26px;
+
+.button:hover {
+    background: #b8b8b8;
+}
+.equals:hover {
+    background: #1883d7;
+}
+.equals:active {
+    background: rgb(67, 152, 207);
+    background: rgba(67, 152, 207, 0.79);
+}
+.top .icon {
+    width: 16px;
+    height: 16px;
+}
+
+.type {
+    display: flex;
+}
+.column {
+    display: flex;
+    align-items: center;
+}
+.history {
+    flex-grow: 6;
+    justify-content: flex-end;
+}
+.button-top {
+    display: flex;
+    padding: 10px 15px;
+    pointer-events: none;
+}
+.menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.sign:active {
+    font-size: 0.9rem;
+}
+.dot {
     font-weight: 900;
-    background:#f2f2f2;
-    padding: 19px 10px;
-    margin: 0 8px;
+    font-size: 1.5rem;
+}
+.dot:active {
+    font-size: 1.4rem;
+}
+.calculator-menu:hover {
+    background: #cfcfcf;
+    cursor: pointer;
+}
+.calculator-chosen {
+    font-size: 1rem;
     float: right;
+    margin: 0px 20px;
+    letter-spacing: 2px;
+    cursor: default;
+    padding: 10px 12px;
+    font-weight: 900;
+}
+.memory {
+    display: flex;
+    font-size: 0.75rem;
+    color: #757575;
+}
+.memory > div:hover {
+    color: #000;
+    background: #cfcfcf;
+    cursor: pointer;
+}
+.memory > div {
+    flex-grow: 1;
+    text-align: center;
+    line-height: 2rem;
+    pointer-events:none;
+}
+
+
+
+.boxDesign{
+    width: 100%;
+    text-align: center;
+    padding: 8px 2px;
+}
+.calculator-change{
+    font-size: 1rem;
+    float: right;
+    margin: 0px 20px;
+    letter-spacing: 2px;
+    cursor: default;
+    padding: 10px 12px;
+    font-weight: 900;
 }
