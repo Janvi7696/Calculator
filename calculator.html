@@ -2,129 +2,340 @@
 <html>
 <head>
 
-    <meta charset="utf-8">
-    <title>Calculator</title>
-    <link rel="stylesheet" type="text/css" href="calculator.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  <title>Calculator</title>
+  <link rel="stylesheet" type="text/css" href="calc.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<form name="calc">
+  <form name="calc">
     <div class="container"> 
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+      <div id="calculator">
         <div class="type">
-            <div class="column menu" >
-
-                <div class="calculator-menu button-top" role="button" >
-                    <img class="icon icons8-Menu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAATElEQVRYR+3TsQ0AMAgDQdh/aFIj0ZKn+AyQOCc7Az4Jvx8GUOCkQC0vo316EsADLAP06092QAEF8BniAeyAAgrgM8QD2AEFFPgq8ACF3gYho2IK1QAAAABJRU5ErkJggg==">
-                    <label class="calculator-chosen">STANDARD</label>
-                </div>
+          <div class="column menu">
+            <div class="calculator-menu button-top" role="button">
+              <img class="icon icons8-Menu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAATElEQVRYR+3TsQ0AMAgDQdh/aFIj0ZKn+AyQOCc7Az4Jvx8GUOCkQC0vo316EsADLAP06092QAEF8BniAeyAAgrgM8QD2AEFFPgq8ACF3gYho2IK1QAAAABJRU5ErkJggg==">
             </div>
+            <label class="calculator-chosen">STANDARD</label>
+          </div>
+          <div class="column history">
+            <div class="button-top" role="button">
+              <img class="icon icons8-Past" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB4klEQVRYR+2W4U3DQAyFXyeAEWACygZsAEwAbFA2gAmACYAJgA1ggsIEMAJMAPqQXSXpxXfXRO2fWqoa5S7287PvnSfasE02HF9bALUM7Eo6k3RipTuy/3dJX5JeJb3Yc1F1SwEQ+EbSeZFX6UHSdQmQFIBfC+JrZHsvCRAYGRLg2zLm3dR+MAJDGOsXkp4j0DkAZExw7M0YgOrI9iTdSjq2TYAAcNIiAKeSnuwr6LxKeOiy1dwys7LxDl9JJiIAUAjtfcFxHAFg3UHga9/K0sojAuC0e6enKMwB4BsypxyPqSbOAegG7e4vAUBPfJojWGj10DoANFm4tAZdJFaqA31NXMIA3/pp4gi7iP37XBcAdGIuCcU8bGYzFoAUQ0X9khOijOYsjuGoAKDpwKjieQzzEnyYZIdN6Oc2lNBKVFVN6OqVFI7KwL7dkyo6hqFwrACgWoiIwe3FtQpyLpIhVi3FBAM1DbgjaYm2CjRezh/zyaXUskgHUCy/jnF0VxGYrStfx804zYEEKmGjZCBhfHPJrR5IuoniiJ6gHN4fDJ+cadcJzjnawdXtcyO081w9kqWYpieYiHzey1WDI0wJlmpe0wN9QGCETAFF1hhs+FhOxrkyhUqYy27U9aG34WAwWwB/XytsITVxIuMAAAAASUVORK5CYII=">
+            </div>
+          </div>
         </div>
-    </header>
+        <div class="screen">
+          <div class="history-screen">
+            <input id="history" name="history" type="text" value=""  >
+          </div>
+          <div class="main-screen">
+            <input id="demo" name="demo" value="0" type="text" >
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="memory">
+            <div role="button">MC</div>
+            <div  id="memory_create"role="button">MR</div>
+            <div role="button">M+</div>
+            <div role="button">M-</div>
+            <div role="button">MS</div>
+            <div role="button">M&darr;</div>
+          </div>
+        </div>
 
-    <input name="demo" value="0" id="demo"></input>
+        <section class="bottom-part">
+          <div class="features">
+            <div class="sub-menu">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="boxDesign">
+                    <div id="percentage" role="button" onclick="{(this.calc.demo.value){percentage(this.calc.demo)} }">
+                      <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABK0lEQVRYR+2WYQ3CMBCFvznAAgrAAeAAHOAACYADHCABJIACcAA4wAHkkpYM6K7XZs3+rAnZYNf169u7Nyo6HlXH69MD9ArEFJgDK2AKnICtO2re3bk5D2AMPLViDUAWPwQmzxQIWfDi5iyAY6zLNIArMHK73gDyWQNnp0jo3qLSJFLzNU8DeLnKek3oN3/DJbB3X4bAPbZ7ud4WwAC4AXIUn4haptEWQJLx6mRtACQbzwrgTShyellDJkw2nhXA0oZZxrMCSJ0EkCjgW0vOZccyso2XApCTeEnpGYviJoAm41kemzmItN03GS85PXMU0IyXmp7J/4hixisOEEu8ogCWxCsKYEk8a3p+DG41oTXxirRhzHi/7aql519rWxUwvdtzinqAXoHOFXgD+J9gIZOwvCMAAAAASUVORK5CYII=">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="boxDesign">
+                    <div id="sqrt"  role="button" onclick="{(this.calc.demo.value) {sqrt(this.calc.demo)} }">
+                      <img class="icon icons8-Square-Root" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABP0lEQVRYR+3V4S0FQRQF4O9VgApQATrQASpABXSAClABOqCCRwWoABWgAnKTnWSzeV5mdkf2z55fm83sPWfPuXfuzMiYjcxvEjA5UNuBd6z/0dgLuWoK2MV8yVT9u4BbHOIC57njXcuBVXw2pJuIKLJQS8ARbvCA/Szm5lAtAS/YwjEiimzUELCNZ3wjoihCDQFXOME1TovYqbILvrCCHUQURRjqQGq+V0QUxVgm4KdVLcYqxquLe+z1ab5UKFdAnO92+AbemkJriCiKkRNBsrnrQjTcJe4QZ3ohR0AUTkum7UJ6d4CIohdyBXRdSIvnAxFFb+QKaLsQfxzXbfHiWaSyREBy4bEZubj1ihbPUAFBGLnHpRN4QkQxCCUOBFHs+bOGsXjxDHUgvk8upOdBfx8flzowmLBbYBIwOTC6A7+1/zEhMa617wAAAABJRU5ErkJggg==">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="boxDesign">
+                    <div id="sqr" role="button" onclick="{(this.calc.demo.value) {square(this.calc.demo)} }"  >
+                      <span class="x-sign">
+                        <sub>x</sub>
+                      </span>
+                      <span>
+                        <sup>2</sup>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="boxDesign">
+
+                    <div id="fraction" role="button" onclick="(this.calc.demo.value) {fraction(this.calc.demo)} " >
+                      <span>
+                        <sup>1</sup>
+                      </span>
+                      <span>&frasl;</span>
+                      <span class="x-sign">
+                        <sub><em>x</em></sub>
+                      </span>
+                    </div>    
+                  </div>
+                </div>
 
 
- <div id="percent" class="button" data-value="%">%</div>
- <div id="root" > &#8730</div>
- <div id="square" > x<sup>2</sup> </div>
- <div id="dividex" > 1/x </div>
+                <div class="col-md-3">
+                  <div class="boxDesign">
+                   <div id="clear-entry" class="button sign" data-value="CE" role="button">CE</div>
+                 </div>
+               </div>
+
+               <div class="col-md-3">
+                <div class="boxDesign">
+                  <div id="clear" class="button sign" data-value="C" role="button">C</div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="boxDesign">
+                  <div id="clear-element" class=" image sign"  role="button">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABDklEQVRYR+2W4Q3CIBSErxu4iY6gm+hmbqIj6CZuUHNJMeQFeAelaUzoT8LjPo570Ak7f9PO+hgAw4G/cuAA4AHg1KFzfhtXHegpTv4qgFj8DeAM4NPowrzUyQA9xaldBaCIc451IzUWDJMBFPE7gCOASwQR6l4AboljkgAUcc55LgAUIwS/0CW5rLgAinjYmIXgOFu0FNQiQI14CoJjXpe4ANZWr93s/RCOI1cnHYEKYR2jAwxlCcIF4CKpgKVazQaOtR68BKBCsA0ZuvhmDPB04drahrmUx/0ez9nkIqqBqHkW5COIF1UyoUI0AdhMqGKlefJrmHNiLUQTwFrRZL36R7SJOBcdAMOB3R34AqM1YCEu+sgCAAAAAElFTkSuQmCC">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="boxDesign">
+                  <div id="divide"  data-value="/" role="button"  onclick="division">
+                    <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAo0lEQVRYR+2VSxGDMBRFTxTUAkioklrAQSVAHSChjmqhdYCDMm8mCz7DIp/yurisQ+6Zk5u8gPMXnPMRgAyUGBiBWyzxE3jkFDoXwMLvm0ADGFIhcgEm4AJcY+ALeAOtJ8AHaM4CMNW95xFYtkF0ixImn7/9m9uBVNOH6wVwZOBbzfF6o13e3wL8SMB+W5WwxICmoaahpmGVx6rkGgpABqoYmAH2Lh4hfK3KfwAAAABJRU5ErkJggg==">
+                  </div> 
+
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="boxDesign">
+                  <div class="button number" role="button" data-value="7">7</div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="boxDesign">
+                  <div class="button number" role="button" data-value="8">8</div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="boxDesign">
+                  <div class="button number" role="button" data-value="9">9</div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="boxDesign">
+                  <div id="multiply" class="button image sign" data-value="*" role="button">
+                    <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABBUlEQVRYR+2W6w3CMAyErxuwCYwAG7AJjAATMQKMUDZhBHQSQaFqYp8DqpDSn2nj+3J+NAMWfoaF9dEBugN/4cAewA3AQ+yYFYADgHNtn+UAxS8ARgA7AYLiVwCbF8CpBGEBMBBPvxYgcvE7gG0N3AIguAIhiTO4B8ALIYsrABZESFwFKEFwPRWcmfNpMXpTkO+b1gTfsdpl8YgDCSSH4FpIvBUg2c446px4OxpNQZ5zBlPmxEcZqABz1c6A6rAKOVBrNWVYhRzw9HkIwpMCj/hcd7gK0wJQxEMQFkD6Hat9nqeD94Hw75inarmQHGviLYNIvByVP7dS8DWh6I2oA3QHfu7AEzfHWCF+OOmJAAAAAElFTkSuQmCC">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="boxDesign">
+                  <div class="button number" role="button" data-value="4">4</div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="boxDesign">
+                  <div class="button number" role="button" data-value="5">5</div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="boxDesign">
+                  <div class="button number" role="button" data-value="6">6</div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="boxDesign">
+                  <div id="minus" class="button image sign" data-value="-" role="button">
+                    <img class="icon icons8-Minus-Math-" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAARElEQVRYR+3V0Q0AMAQFQPYfuh1A+ql8nAF4LhIZw5XD80MAAgQIECCwVuA0fcmy8EtgPEATQG279gYIECBAgACBbwIXi38CITaYSB4AAAAASUVORK5CYII=">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="boxDesign">
+                  <div class="button number" role="button" data-value="1">1</div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="boxDesign">
+                  <div class="button number" role="button" data-value="2">2</div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="boxDesign">
+                  <div class="button number" role="button" data-value="3">3</div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="boxDesign">
+                  <div id="plus" class="button image sign" data-value="+" role="button">
+                    <img class="icon icons8-Plus-Math" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAWUlEQVRYR+2WMQoAIAgA9f+PrsWmEMQSEa7Z8rzEUmle2pxfABhvYFkPpQtJb7TEAGAAAxgoM3AO/v1YXoPPm4TtANHKy64AAAxgAANjDERB3bjXXzEA8w1s3k4WIU0YaEoAAAAASUVORK5CYII=">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="boxDesign">
+                  <div id="plus-minus" class="button image sign" data-value="+-" role="button" onclick="plusMinus(this.calc.demo)">
+                    <img class="icon icons8-Plus-Minus" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAYUlEQVRYR+2VMQ4AIAgD4f+P1gUdCakx1VB3pL0UcCM/J/c3CfiewIgMwUbgwmgsASLQg8ByiW7tdNIqY0gXkDnvkQEREIGnCaDLaddVFtFxk+wDCagQoN8CugCFUASuEpjXIBIhP3OSdgAAAABJRU5ErkJggg==">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="boxDesign">
+                  <div class="button number" role="button" data-value="0">0</div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="boxDesign">
+                  <div id="dot" class="button dot sign" data-value="." role="button">.</div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="boxDesign">
+                  <div id="equal" class="image equals sign" data-value="=" role="button">
+                    <img class="icon icons8-Equal-Sign" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAQ0lEQVRYR+3U0Q0AMAQFQPYfuh1A+ikkPQMgF0/GcOXw/LAAAQIECLwETtOLLvPWLtAEUNs6wrUCUiAFBAgQIPCPwAX8vwQhcNJI5wAAAABJRU5ErkJggg==" width="32" height="32">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
 
-    <div id="clear" data-value="C" > CE </div>
-    <div id="clear_entry" data-value="CE"> C </div>
-    <div id="delete"> <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABDklEQVRYR+2W4Q3CIBSErxu4iY6gm+hmbqIj6CZuUHNJMeQFeAelaUzoT8LjPo570Ak7f9PO+hgAw4G/cuAA4AHg1KFzfhtXHegpTv4qgFj8DeAM4NPowrzUyQA9xaldBaCIc451IzUWDJMBFPE7gCOASwQR6l4AboljkgAUcc55LgAUIwS/0CW5rLgAinjYmIXgOFu0FNQiQI14CoJjXpe4ANZWr93s/RCOI1cnHYEKYR2jAwxlCcIF4CKpgKVazQaOtR68BKBCsA0ZuvhmDPB04drahrmUx/0ez9nkIqqBqHkW5COIF1UyoUI0AdhMqGKlefJrmHNiLUQTwFrRZL36R7SJOBcdAMOB3R34AqM1YCEu+sgCAAAAAElFTkSuQmCC"></div>
-    <div class="button" data-value="/">&#xf7</div>
-    
-    
-    <div class="button" data-value="7">7</div>
-    <div class="button" data-value="8">8</div>
-    <div class="button" data-value="9">9</div>
-    <div class="button" data-value="*">*</div>
+ <!-- <div id="scientific_calc">
+      <div class="contain"> 
+       <div class="calculator-menu button-top" role="button">
+        <img class="icon icons8-Menu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAATElEQVRYR+3TsQ0AMAgDQdh/aFIj0ZKn+AyQOCc7Az4Jvx8GUOCkQC0vo316EsADLAP06092QAEF8BniAeyAAgrgM8QD2AEFFPgq8ACF3gYho2IK1QAAAABJRU5ErkJggg==">
+      </div>
+      <label class="calculator-chosen">SCIENTIFIC</label>
+    </div>
 
-    <div class="button" data-value="4">4</div>
-    <div class="button" data-value="5">5</div>
-    <div class="button" data-value="6">6</div>
-    <div class="button" data-value="-">-</div>
+    <div class="screen">
+      <div class="history-screen">
+        <input id="history" name="history" type="text" value=""  >
+      </div>
+      <div class="main-screen">
+        <input id="demo_1" name="demo_1" value="0" type="text" >
+      </div>
+    </div>
+    <div class="row">
+      <div id="sqr" role="button" onclick="{(this.calc.demo.value) {square(this.calc)} }"  >
+        <span class="x-sign">
+          <sub>x</sub>
+        </span>
+        <span>
+          <sup>2</sup>
+        </span>
+      </div>
+      <div id="fraction"  role="button" onclick="{(this.calc.demo.value) {fraction(this.calc)}}">
+        <span>
+          <sup>x</sup>
+        </span>
+        <span>&frasl;</span>
+        <span class="x-sign">
+          <sub><em>y</em></sub>
+        </span>
+      </div>
+      <div id="sin" role="button" onclick="{(this.calc.demo.value) {sin(this.calc)} }">  sin
+      </div>
+      <div id="cos" role="button" onclick="{(this.calc.demo.value) {cos(this.calc)} }">  cos
+      </div>
+      <div id="tan" role="button" onclick="{(this.calc.demo.value) {tan(this.calc)} }">  tan
+      </div>
+    </div>
+    <div class="row">
 
-    <div class="button" data-value= 1 >1</div>
-    <div class="button" data-value= 2 >2</div>
-    <div class="button" data-value="3">3</div>
-    <div class="button" data-value="+">+</div>
+      <div id="sqrt"  role="button" onclick="{(this.calc.demo.value) {sqrt(this.calc)} }">
+        <img class="icon icons8-Square-Root" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABP0lEQVRYR+3V4S0FQRQF4O9VgApQATrQASpABXSAClABOqCCRwWoABWgAnKTnWSzeV5mdkf2z55fm83sPWfPuXfuzMiYjcxvEjA5UNuBd6z/0dgLuWoK2MV8yVT9u4BbHOIC57njXcuBVXw2pJuIKLJQS8ARbvCA/Szm5lAtAS/YwjEiimzUELCNZ3wjoihCDQFXOME1TovYqbILvrCCHUQURRjqQGq+V0QUxVgm4KdVLcYqxquLe+z1ab5UKFdAnO92+AbemkJriCiKkRNBsrnrQjTcJe4QZ3ohR0AUTkum7UJ6d4CIohdyBXRdSIvnAxFFb+QKaLsQfxzXbfHiWaSyREBy4bEZubj1ihbPUAFBGLnHpRN4QkQxCCUOBFHs+bOGsXjxDHUgvk8upOdBfx8flzowmLBbYBIwOTC6A7+1/zEhMa617wAAAABJRU5ErkJggg==">
+      </div>
+      <div id="raise_power" role="button" onclick="{(this.calc.demo.value) {raise_power(this.calc)} }"  >
+        <span class="x-sign">
+          <sub>10</sub>
+        </span>
+        <span>
+          <sup>x</sup>
+        </span>
+      </div>
+      <div id="log" role="button" onclick="{(this.calc.demo.value) {log10(this.calc)} }">  log
+      </div>
 
-    <div class="button" data-value="&#177">&#177</div>
-    <div class="button" data-value="0">0</div>
-    <div class="button" data-value=".">.</div>
-    <div id="evaluate" > = </div>   
+      <div id="Exponential" role="button" onclick="{(this.calc.demo.value) {exp(this.calc)} }"> exp
+      </div>
 
-    <div id="mr" > </div>
-    <div id="mc" > </div>
-    
+      <div id="Modulus" role="button" onclick="{(this.calc.demo.value) {mod(this.calc)} }"> mod
+      </div>
+
+    </div>
+    <div class="column">
+      <div id="arrow" role="button"  data-value="&uarr" >&uarr;
+      </div>
+
+      <div id="pie" role="button" data-value="&pi" >&pi;
+      </div>
+
+      <div id="factorial"  data-value="n!" role="button" > n!
+      </div>
+
+      <div id="plus-minus" data-value="&plusmn" role="button" > &plusmn;
+      </div>
+
+      <div id="bracket_1" data-value="(" role="button" > (
+      </div>
+
+
+    </div>
+</div>
+
+-->
+
+
+
+
+
+
+
 
 
 </div>
-
-<div class="contain"> 
-
-    <input name="demo_1" value="0" id="demo_1"></input>
-
- <div id="mr" > </div>
-    <div id="mc" > </div>
-    
-
-
-
- <div id="square" > x<sup>2</sup> </div>
- <div id="dividex" > x/y </div>
- <div id="sin" > sin </div>
- <div id="cos" > cos </div>
- <div id="tan" > tan </div>
-
- 
-  <div id="root" > √ </div>
-    <div id="raise_power">10<sup>x</sup></div>
-    <div id="log" > log </div>
-    <div id="Exponential" >Exp</div>
-    <div id="Modulus" >Mod</div>
-    
-    <div id="arrow"> &#8593</div>
-    <div id="clear_entry" data-value="C" > CE </div>
-    <div id="clear" data-value="Ce" > C </div>
-    <div id="remove"> <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABDklEQVRYR+2W4Q3CIBSErxu4iY6gm+hmbqIj6CZuUHNJMeQFeAelaUzoT8LjPo570Ak7f9PO+hgAw4G/cuAA4AHg1KFzfhtXHegpTv4qgFj8DeAM4NPowrzUyQA9xaldBaCIc451IzUWDJMBFPE7gCOASwQR6l4AboljkgAUcc55LgAUIwS/0CW5rLgAinjYmIXgOFu0FNQiQI14CoJjXpe4ANZWr93s/RCOI1cnHYEKYR2jAwxlCcIF4CKpgKVazQaOtR68BKBCsA0ZuvhmDPB04drahrmUx/0ez9nkIqqBqHkW5COIF1UyoUI0AdhMqGKlefJrmHNiLUQTwFrRZL36R7SJOBcdAMOB3R34AqM1YCEu+sgCAAAAAElFTkSuQmCC"></div>
-
-    <div id="evaluation" data-value="="> = </div> 
-    <div id="mr" > </div>
-    <div class="button_1" data-value="/">&#xf7</div>
-
-
-
-    <div class="button_1" data-value="">&#960</div>
-    <div class="button_1" data-value="7">7</div>
-    <div class="button_1" data-value="8">8</div>
-    <div class="button_1" data-value="9">9</div>
-    <div class="button_1" data-value="*">*</div>
-
-    <div class="button_1" data-value="n!">n!</div>
-    <div class="button_1" data-value="4">4</div>
-    <div class="button_1" data-value="5">5</div>
-    <div class="button_1" data-value="6">6</div>
-    <div class="button_1" data-value="-">-</div>
-
-    <div class="button_1" data-value="&#177">&#177</div>
-    <div class="button_1" data-value= 1 >1</div>
-    <div class="button_1" data-value= 2 >2</div>
-    <div class="button_1" data-value="3">3</div>
-    <div class="button_1" data-value="+">+</div>
-
-    <div class="button_1" data-value="(">(</div>
-    <div class="button_1" data-value=")">)</div>
-    <div class="button_1" data-value="0">0</div>
-    <div class="button_1" data-value=".">.</div>
-
-
 </div>
-<script src="calculator.js" ></script>
-
-</body>
+<script src="calc.js" ></script>
 </form>
+</body>
 </html>
